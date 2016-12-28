@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.rezmike.flowapplication.R;
 import com.rezmike.flowapplication.base.AbstractScreen;
 import com.rezmike.flowapplication.base.Screen;
-import com.rezmike.flowapplication.red.RedScope;
 import com.rezmike.flowapplication.root.RootActivity;
 import com.rezmike.flowapplication.root.RootPresenter;
 import com.rezmike.flowapplication.utils.DaggerService;
@@ -33,20 +32,20 @@ public class GreenScreen extends AbstractScreen<RootActivity.RootComponent> {
     @dagger.Module
     public class Module {
         @Provides
-        @RedScope
+        @GreenScope
         GreenScreen.GreenPresenter provideGreenPresenter() {
             return new GreenPresenter();
         }
 
         @Provides
-        @RedScope
+        @GreenScope
         GreenModel provideGreenModel() {
             return new GreenModel();
         }
     }
 
     @dagger.Component(dependencies = RootActivity.RootComponent.class, modules = Module.class)
-    @RedScope
+    @GreenScope
     public interface Component {
         void inject(GreenPresenter screen);
 
