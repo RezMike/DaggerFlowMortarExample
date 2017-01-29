@@ -1,8 +1,8 @@
-package com.rezmike.flowapplication.root;
+package com.rezmike.flowapplication.ui.root;
 
 import android.support.annotation.Nullable;
 
-import com.rezmike.flowapplication.base.IView;
+import com.rezmike.flowapplication.ui.abstracts.IView;
 
 public interface IRootView extends IView {
 

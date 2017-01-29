@@ -1,4 +1,4 @@
-package com.rezmike.flowapplication.app;
+package com.rezmike.flowapplication.di;
 
 import android.content.Context;
 

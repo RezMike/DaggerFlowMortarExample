@@ -1,4 +1,4 @@
-package com.rezmike.flowapplication.root;
+package com.rezmike.flowapplication.ui.root;
 
 import dagger.Provides;
 

@@ -1,16 +1,15 @@
-package com.rezmike.flowapplication.root;
+package com.rezmike.flowapplication.ui.root;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 
 import com.rezmike.flowapplication.BuildConfig;
 import com.rezmike.flowapplication.R;
-import com.rezmike.flowapplication.app.AppComponent;
-import com.rezmike.flowapplication.base.IView;
-import com.rezmike.flowapplication.red.RedScreen;
+import com.rezmike.flowapplication.di.AppComponent;
+import com.rezmike.flowapplication.ui.abstracts.IView;
+import com.rezmike.flowapplication.ui.red.RedScreen;
 import com.rezmike.flowapplication.utils.TreeKeyDispatcher;
 
 import flow.Flow;

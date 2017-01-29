@@ -1,11 +1,7 @@
-package com.rezmike.flowapplication.red;
+package com.rezmike.flowapplication.ui.yellow;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.rezmike.flowapplication.R;
@@ -13,25 +9,18 @@ import com.rezmike.flowapplication.utils.DaggerService;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import flow.Flow;
 
-import static android.content.ContentValues.TAG;
-
-public class RedView extends RelativeLayout {
+public class YellowView extends RelativeLayout {
 
     @Inject
-    RedScreen.RedPresenter mPresenter;
+    YellowScreen.YellowPresenter mPresenter;
 
-    @BindView(R.id.button)
-    Button mButton;
-
-    public RedView(Context context, AttributeSet attrs) {
+    public YellowView(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (!isInEditMode()) {
-            DaggerService.<RedScreen.Component>getDaggerComponent(context).inject(this);
+            DaggerService.<YellowScreen.Component>getDaggerComponent(context).inject(this);
         }
     }
 

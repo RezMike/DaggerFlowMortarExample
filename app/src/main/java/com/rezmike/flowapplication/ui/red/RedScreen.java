@@ -1,13 +1,13 @@
-package com.rezmike.flowapplication.red;
+package com.rezmike.flowapplication.ui.red;
 
 import android.os.Bundle;
 
 import com.rezmike.flowapplication.R;
-import com.rezmike.flowapplication.base.AbstractScreen;
-import com.rezmike.flowapplication.base.Screen;
-import com.rezmike.flowapplication.green.GreenScreen;
-import com.rezmike.flowapplication.root.RootActivity;
-import com.rezmike.flowapplication.root.RootPresenter;
+import com.rezmike.flowapplication.ui.abstracts.AbstractScreen;
+import com.rezmike.flowapplication.ui.abstracts.Screen;
+import com.rezmike.flowapplication.ui.green.GreenScreen;
+import com.rezmike.flowapplication.ui.root.RootActivity;
+import com.rezmike.flowapplication.ui.root.RootPresenter;
 import com.rezmike.flowapplication.utils.DaggerService;
 
 import javax.inject.Inject;

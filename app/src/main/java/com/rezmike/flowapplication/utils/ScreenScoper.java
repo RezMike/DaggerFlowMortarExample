@@ -2,7 +2,7 @@ package com.rezmike.flowapplication.utils;
 
 import android.util.Log;
 
-import com.rezmike.flowapplication.base.AbstractScreen;
+import com.rezmike.flowapplication.ui.abstracts.AbstractScreen;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.HashMap;

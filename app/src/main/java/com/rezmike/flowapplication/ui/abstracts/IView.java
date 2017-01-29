@@ -1,4 +1,4 @@
-package com.rezmike.flowapplication.base;
+package com.rezmike.flowapplication.ui.abstracts;
 
 public interface IView {
 

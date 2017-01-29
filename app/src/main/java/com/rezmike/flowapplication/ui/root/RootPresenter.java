@@ -1,6 +1,6 @@
-package com.rezmike.flowapplication.root;
+package com.rezmike.flowapplication.ui.root;
 
-import com.rezmike.flowapplication.base.AbstractPresenter;
+import com.rezmike.flowapplication.ui.abstracts.AbstractPresenter;
 
 public class RootPresenter extends AbstractPresenter<IRootView> {
 

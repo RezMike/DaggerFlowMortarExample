@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.rezmike.flowapplication.ui.red.RedView
+<com.rezmike.flowapplication.ui.yellow.YellowView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@android:color/holo_red_dark">
+    android:background="@android:color/holo_orange_dark">
 
     <Button
         android:id="@+id/button"
@@ -12,4 +12,4 @@
         android:layout_height="wrap_content"
         android:text="GreenScreen"/>
 
-</com.rezmike.flowapplication.ui.red.RedView>
+</com.rezmike.flowapplication.ui.yellow.YellowView>

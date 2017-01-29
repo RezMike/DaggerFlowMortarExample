@@ -1,12 +1,12 @@
-package com.rezmike.flowapplication.green;
+package com.rezmike.flowapplication.ui.yellow;
 
 import android.os.Bundle;
 
 import com.rezmike.flowapplication.R;
-import com.rezmike.flowapplication.base.AbstractScreen;
-import com.rezmike.flowapplication.base.Screen;
-import com.rezmike.flowapplication.root.RootActivity;
-import com.rezmike.flowapplication.root.RootPresenter;
+import com.rezmike.flowapplication.ui.abstracts.AbstractScreen;
+import com.rezmike.flowapplication.ui.abstracts.Screen;
+import com.rezmike.flowapplication.ui.root.RootActivity;
+import com.rezmike.flowapplication.ui.root.RootPresenter;
 import com.rezmike.flowapplication.utils.DaggerService;
 
 import javax.inject.Inject;
@@ -16,12 +16,12 @@ import flow.Flow;
 import mortar.MortarScope;
 import mortar.ViewPresenter;
 
-@Screen(R.layout.screen_green)
-public class GreenScreen extends AbstractScreen<RootActivity.RootComponent> {
+@Screen(R.layout.screen_yellow)
+public class YellowScreen extends AbstractScreen<RootActivity.RootComponent> {
 
     @Override
     public Object createScreenComponent(RootActivity.RootComponent parentComponent) {
-        return DaggerGreenScreen_Component.builder()
+        return DaggerYellowScreen_Component.builder()
                 .rootComponent(parentComponent)
                 .module(new Module())
                 .build();
@@ -31,37 +31,38 @@ public class GreenScreen extends AbstractScreen<RootActivity.RootComponent> {
 
     @dagger.Module
     public class Module {
+
         @Provides
-        @GreenScope
-        GreenScreen.GreenPresenter provideGreenPresenter() {
-            return new GreenPresenter();
+        @YellowScope
+        YellowPresenter provideYellowPresenter() {
+            return new YellowPresenter();
         }
 
         @Provides
-        @GreenScope
-        GreenModel provideGreenModel() {
-            return new GreenModel();
+        @YellowScope
+        YellowModel provideYellowModel() {
+            return new YellowModel();
         }
     }
 
     @dagger.Component(dependencies = RootActivity.RootComponent.class, modules = Module.class)
-    @GreenScope
+    @YellowScope
     public interface Component {
-        void inject(GreenPresenter screen);
+        void inject(YellowPresenter presenter);
 
-        void inject(GreenView view);
+        void inject(YellowView view);
     }
 
     //endregion
 
     //region ======================== Presenter ========================
 
-    public class GreenPresenter extends ViewPresenter<GreenView> {
+    public class YellowPresenter extends ViewPresenter<YellowView> {
 
         @Inject
         RootPresenter mRootPresenter;
         @Inject
-        GreenModel mGreenModel;
+        YellowModel mYellowModel;
 
         @Override
         protected void onLoad(Bundle savedInstanceState) {

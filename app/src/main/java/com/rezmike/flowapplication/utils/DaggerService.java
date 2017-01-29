@@ -18,7 +18,6 @@ public class DaggerService {
         return (T) context.getSystemService(SERVICE_NAME);
     }
 
-    // TODO: 01.12.2016 fix me
     public static void registerComponent(Class componentClass, Object daggerComponent) {
         sComponentMap.put(componentClass, daggerComponent);
     }
@@ -26,8 +25,7 @@ public class DaggerService {
     @Nullable
     @SuppressWarnings("unchecked")
     public static <T> T getComponent(Class<T> componentClass) {
-        Object component = sComponentMap.get(componentClass);
-        return (T) component;
+        return (T) sComponentMap.get(componentClass);
     }
 
     public static void unregisterScope(Class<? extends Annotation> scopeAnnotation) {

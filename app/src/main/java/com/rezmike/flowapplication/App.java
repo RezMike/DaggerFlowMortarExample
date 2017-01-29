@@ -1,10 +1,13 @@
-package com.rezmike.flowapplication.app;
+package com.rezmike.flowapplication;
 
 import android.app.Application;
 
-import com.rezmike.flowapplication.root.DaggerRootActivity_RootComponent;
-import com.rezmike.flowapplication.root.RootActivity;
-import com.rezmike.flowapplication.root.RootModule;
+import com.rezmike.flowapplication.di.AppComponent;
+import com.rezmike.flowapplication.di.AppModule;
+import com.rezmike.flowapplication.di.DaggerAppComponent;
+import com.rezmike.flowapplication.ui.root.DaggerRootActivity_RootComponent;
+import com.rezmike.flowapplication.ui.root.RootActivity;
+import com.rezmike.flowapplication.ui.root.RootModule;
 import com.rezmike.flowapplication.utils.DaggerService;
 import com.rezmike.flowapplication.utils.ScreenScoper;
 

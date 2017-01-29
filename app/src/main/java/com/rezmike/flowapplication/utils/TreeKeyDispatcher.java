@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.rezmike.flowapplication.base.AbstractScreen;
 import com.rezmike.flowapplication.R;
-import com.rezmike.flowapplication.base.Screen;
+import com.rezmike.flowapplication.ui.abstracts.AbstractScreen;
+import com.rezmike.flowapplication.ui.abstracts.Screen;
 
 import java.util.Collections;
 import java.util.Map;
